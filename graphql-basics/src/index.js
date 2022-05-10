@@ -26,7 +26,7 @@ const resolvers = {
       return null;
     },
     rating() {
-      return 4.5;
+      return 4.6;
     },
     inStock() {
       return true;

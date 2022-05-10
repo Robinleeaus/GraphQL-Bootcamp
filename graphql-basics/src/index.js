@@ -1,4 +1,4 @@
-import { GraphQLServer } from 'graphql-yoga'
+import { GraphQLServer } from "graphql-yoga";
 
 // Scalar type - String, Boolean, Int, Float, ID
 
@@ -11,34 +11,34 @@ const typeDefs = `
     rating: Float
     inStock: Boolean!
   }
-`
+`;
 
 // Resolvers
 const resolvers = {
   Query: {
     title() {
-      return 'Book 1'
+      return "Book 1";
     },
     price() {
-      return 10.8
+      return 10.8;
     },
     releaseYear() {
-      return null
+      return null;
     },
     rating() {
-      return 4.5
+      return 4.5;
     },
     inStock() {
-      return true
-    }
-  }
-}
+      return true;
+    },
+  },
+};
 
 const server = new GraphQLServer({
   typeDefs,
-  resolvers
-})
+  resolvers,
+});
 
 server.start(() => {
-  console.log('The server is up!')
-})
+  console.log("The server is up!");
+});
